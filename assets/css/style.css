@@ -1,0 +1,22 @@
+body {
+    background: slategray;
+}
+
+header .title{
+    font-size: 40px;
+    color: #f78f07;
+}
+
+.quiz-text {
+    font-size:18px;
+    color: #FFFFFF;
+}
+
+.btn {
+    padding: 15px;
+    margin: 15px;
+    color: #cecece;
+    font-size: 20px;
+    background: #005780;
+    border-radius: 15px;
+}
