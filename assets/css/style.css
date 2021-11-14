@@ -2,6 +2,10 @@ body {
     background: slategray;
 }
 
+.hide {
+    display: none;
+}
+
 header .title{
     font-size: 40px;
     color: #f78f07;
@@ -13,6 +17,11 @@ header .title{
     color: #FFFFFF;
 }
 
+#question1 {
+    color: pink;
+}
+
+
 .btn {
     padding: 15px;
     margin: 15px;
@@ -22,9 +31,27 @@ header .title{
     border-radius: 15px;
 }
 
+
 #timer {
     color: #ff0000;
     font-size: 20px;
     font-weight: bold;
     text-shadow: 2px 2px 3px #000000;
+}
+
+/* question content style starts */
+.question-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.quiz-btn {
+    padding: 25px;
+    margin: 25px;
+    color: #000000;
+    font-size: 20px;
+    background: #FFFFFF;
+    border-radius: 15px;
 }
