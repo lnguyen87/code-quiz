@@ -5,6 +5,7 @@ body {
 header .title{
     font-size: 40px;
     color: #f78f07;
+    text-shadow: 1px 1px 2px #000000;
 }
 
 .quiz-text {
@@ -19,4 +20,11 @@ header .title{
     font-size: 20px;
     background: #005780;
     border-radius: 15px;
+}
+
+#timer {
+    color: #ff0000;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px #000000;
 }
