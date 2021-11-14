@@ -1,5 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 2em;
+}
+
 body {
     background: slategray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .hide {
@@ -7,20 +20,15 @@ body {
 }
 
 header .title{
-    font-size: 40px;
+    padding: 20px;
+    font-size: 60px;
     color: #f78f07;
     text-shadow: 1px 1px 2px #000000;
 }
 
 .quiz-text {
-    font-size:18px;
     color: #FFFFFF;
 }
-
-#question1 {
-    color: pink;
-}
-
 
 .btn {
     padding: 15px;
@@ -47,6 +55,13 @@ header .title{
     flex-wrap: wrap;
     align-items: flex-start;
 }
+
+#question {
+    color: pink;
+    font-size: 40px;
+    margin-top: 50px;
+}
+
 .quiz-btn {
     padding: 25px;
     margin: 25px;

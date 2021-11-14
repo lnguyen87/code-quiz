@@ -1,11 +1,9 @@
 var startButton = document.querySelector("#start");
 var scoreButton = document.querySelector("#highscore");
 var introText = document.querySelector(".quiz-text");
-var question1 = document.querySelector("#question1");
-var quizbtn1 = document.querySelector(".quiz-btn1");
-var quizbtn2 = document.querySelector(".quiz-btn2");
-var quizbtn3 = document.querySelector(".quiz-btn3");
-var quizbtn4 = document.querySelector(".quiz-btn4");
+var questionContent = document.querySelector("#question-content");
+
+
 
 // Create answer buttons
 var btn1 = document.createElement("button");
@@ -21,11 +19,8 @@ function startQuiz() {
     startButton.remove();
     scoreButton.remove();
     introText.remove();
-    question1.classList.remove("hide");
-    quizbtn1.classList.remove("hide");
-    quizbtn2.classList.remove("hide");
-    quizbtn3.classList.remove("hide");
-    quizbtn4.classList.remove("hide");
+    questionContent.classList.remove("hide");
+
     
     // display and start countdown timer
     var counter = 60;
