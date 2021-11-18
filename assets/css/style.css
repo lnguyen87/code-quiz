@@ -70,3 +70,6 @@ header .title{
     display: grid;
 }
 
+#score-table tr {
+    border: 5px solid #FFFFFF;
+}

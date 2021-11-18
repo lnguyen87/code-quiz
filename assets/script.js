@@ -11,6 +11,8 @@ var answers = document.querySelector(".answers");
 var scoreContent = document.querySelector("#highscore-content");
 var scoreTitle = document.querySelector("#highscore-title");
 var playerScore = 0;
+var scoreTable = document.querySelector("#score-table")
+
 
 
 
