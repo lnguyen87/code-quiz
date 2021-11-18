@@ -59,7 +59,7 @@ function showQuestion() {
     if(counter === 0 || currentIndex === possibleQuestion.length) {
         console.log("The quiz has ended.");
         questionContent.style.display = "none";
-        clearInterval();
+        clearInterval(counter);
         timer.remove();
         return
     }
@@ -72,7 +72,7 @@ function showQuestion() {
         answerBtn.textContent = answerEl;
         answerBtn.setAttribute("value", answerEl);
         answerBtn.onclick = checkAnswer;
-        answers.append(answerBtn);
+        answers.appendChild(answerBtn);
     }
 }
 
@@ -82,6 +82,7 @@ function checkAnswer() {
         console.log("Correct");
         console.log(this.value);
         currentIndex++;
+        showQuestion();
     } else {
         console.log("Incorrect");
     }
