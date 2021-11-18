@@ -14,17 +14,17 @@ var answers = document.querySelector(".answers");
 var possibleQuestion = [{
     questions: "How many inches are in a foot?",
     answer: ["2", "6", "5", "12"],
-    correct: 4,
+    correct: "12",
 },
 {
     questions: "What color is the sky?",
     answer: ["Red", "Green", "Purple", "Blue"],
-    correct: 1,
+    correct: "Blue",
 },
 {
     questions: "What is the sum of 2 + 2?",
     answer: ["22", "4", "0", "2"],
-    correct: 2,
+    correct: "4",
 }
 ];
 
@@ -57,7 +57,7 @@ setInterval(function() {
 function showQuestion() {
     answers.innerHTML = "";
     if(counter === 0 || currentIndex === possibleQuestion.length) {
-        console.log("Sorry, time's up!");
+        console.log("The quiz has ended.");
         questionContent.style.display = "none";
         clearInterval();
         timer.remove();
@@ -70,11 +70,22 @@ function showQuestion() {
         console.log(answerEl);
         var answerBtn = document.createElement("button");
         answerBtn.textContent = answerEl;
-        answerBtn.setAttribute = ("value", answerEl);
+        answerBtn.setAttribute("value", answerEl);
+        answerBtn.onclick = checkAnswer;
         answers.append(answerBtn);
     }
 }
 
+// check if answer is correct or incorrect
+function checkAnswer() {
+    if (this.value === possibleQuestion[currentIndex].correct) {
+        console.log("Correct");
+        console.log(this.value);
+        currentIndex++;
+    } else {
+        console.log("Incorrect");
+    }
+}
 showQuestion();
 
 };
