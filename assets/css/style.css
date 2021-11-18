@@ -57,17 +57,15 @@ header .title{
 }
 
 #question {
-    color: pink;
+    color: #FFFFFF;
     font-size: 40px;
     margin-top: 50px;
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px #000000;
 }
 
-.quiz-btn {
+.answers {
     padding: 15px;
     margin: 15px;
-    color: #57206d;
-    font-size: 20px;
-    background: #FFFFFF;
-    border-radius: 15px;
     display: grid;
 }
