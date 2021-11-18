@@ -63,10 +63,11 @@ header .title{
 }
 
 .quiz-btn {
-    padding: 25px;
-    margin: 25px;
-    color: #000000;
+    padding: 15px;
+    margin: 15px;
+    color: #57206d;
     font-size: 20px;
     background: #FFFFFF;
     border-radius: 15px;
+    display: grid;
 }
