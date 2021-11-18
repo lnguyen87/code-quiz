@@ -16,29 +16,29 @@ var playerScore = 0;
 
 //  question and answers array
 var possibleQuestion = [{
-    questions: "How many inches are in a foot?",
-    answer: ["2", "6", "5", "12"],
-    correct: "12",
+    questions: "Inside the HTML document, where do you place your JavaScript code?",
+    answer: ["In the <footer> element", "Inside the <script> element", "Inside the <head> element", "Inside the <link> element"],
+    correct: "Inside the <script> element",
 },
 {
-    questions: "What color is the sky?",
-    answer: ["Red", "Green", "Purple", "Blue"],
-    correct: "Blue",
+    questions: "What are the six primitive data types in JavaScript?",
+    answer: ["sentence, int, truthy, bigInt, symbol, undefined", "string, num, falsy, bigInt, symbol, undefined", "sentence, float, data, bigInt, symbol, undefined", "string, number, boolean, bigInt, symbol, undefined"],
+    correct: "string, number, boolean, bigInt, symbol, undefined",
 },
 {
-    questions: "What is the sum of 2 + 2?",
-    answer: ["22", "4", "0", "2"],
-    correct: "4",
+    questions: "How do we declare a conditional statement in JavaScript?",
+    answer: ["difference...between", "while loop", "if...else", "for loop"],
+    correct: "if...else",
 },
 {
-    questions: "How many feet are in a yard?",
-    answer: ["3", "6", "9", "12"],
-    correct: "3",
+    questions: "How do we stop a loop from repeating indefinitely?",
+    answer: ["A loop will stop executing when the condition is false.", "A loop will stop executing when the condition is true.", "When we have iterated through half of the condition.", "We have to explicitly end the loop with the break keyword."],
+    correct: "A loop will stop executing when the condition is false.",
 },
 {
-    questions: "What color is grass?",
-    answer: ["Green", "Orange", "Yellow", "Brown"],
-    correct: "Green",
+    questions: "As a developer, I want to be able to remove the last element of my array and I want to also be able to add a new element to the beginning of my array. Which two array methods should I use?",
+    answer: ["forEach() and pop()", "concat() and shift()", "push() and sort()", "pop() and unshift()"],
+    correct: "pop() and unshift()",
 }
 ];
 
