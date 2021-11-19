@@ -12,6 +12,8 @@ var scoreContent = document.querySelector("#highscore-content");
 var scoreTitle = document.querySelector("#highscore-title");
 var playerScore = 0;
 var scoreTable = document.querySelector("#score-table")
+var scoreName = document.querySelector("#scoreName");
+var scoreScore = document.querySelector("#scoreScore");
 
 
 
@@ -60,7 +62,7 @@ setInterval(function() {
     counter--;
     if (counter >= 0) {
         span = document.getElementById("timer");
-        span.innerHTML = "Time remaining: " + counter;
+        span.innerText = "Time remaining: " + counter;
     }
 // alert user once timer reaches 0
     if (counter === 0) {
@@ -126,7 +128,7 @@ var endQuiz = function() {
 
     if (playerScore >= highScore) {
         localStorage.setItem("highscore", playerScore);
-        localStorage.setItem("name", playerName);
+        localStorage.setItem("name", playerName());
 
         alert("You have the high score of " + playerScore + "!");
     } else {
@@ -135,17 +137,28 @@ var endQuiz = function() {
 
     if (playerScore > 0) {
         alert("Your score is " + playerScore + " out of 50.");
+        localStorage.setItem("highscore", playerScore);
+        localStorage.setItem("name", playerName());
     } else {
         alert("You did not answer any questions correctly.");
     }
 
+    var highScoreDisplay = function () {
+        var name = localStorage.getItem("name");
+        console.log(name);
+        
+        
+    }
+    highScoreDisplay();
+    
 };
 
+// opens a window to add player name to a high score
 var playerName = function() {
     var name = "";
 
     while (name === "" || name === null) {
-        name = prompt("Please enter your name.")
+        name = prompt("Please enter your initials.")
     }
     console.log("Player name is " + name);
     return name;
