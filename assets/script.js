@@ -11,7 +11,7 @@ var answers = document.querySelector(".answers");
 var scoreContent = document.querySelector("#highscore-content");
 var scoreTitle = document.querySelector("#highscore-title");
 var playerScore = 0;
-var scoreTable = document.querySelector("#score-table")
+var scoreTable = document.querySelector("#score-table");
 var scoreName = document.querySelector("#scoreName");
 var scoreScore = document.querySelector("#scoreScore");
 
@@ -135,7 +135,7 @@ var endQuiz = function() {
         alert("You did not beat the high score of " + highScore + ". Better luck next time!");
     }
 
-    if (playerScore > 0) {
+    if (playerScore > 0 && playerScore < highScore) {
         alert("Your score is " + playerScore + " out of 50.");
         localStorage.setItem("highscore", playerScore);
         localStorage.setItem("name", playerName());
@@ -145,7 +145,11 @@ var endQuiz = function() {
 
     var highScoreDisplay = function () {
         var name = localStorage.getItem("name");
-        console.log(name);
+        console.log(scoreName);
+        console.log(scoreScore);
+        // update text of id scoreName 
+        scoreName.textContent = name;
+        scoreScore.textContent = highScore;
         
         
     }
