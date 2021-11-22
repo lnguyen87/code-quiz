@@ -2,37 +2,25 @@
 ## Description
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
 - What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-## Table of Contents (Optional)
-If your README is long, add a table of contents to make it easy for users to find what they need.
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+- Why did you build this project? To showcase using javascript to create text, interactive elements on the DOM, setting items user inputs to localStorage, and retrieving saved inputs from localStorage.
+- What problem does it solve? Code quiz solves a problem of having to create flash cards. Instead, the user can create a quiz game to help them remember javascript. 
+- What did you learn? I learned how to use javascript to: create elements, assign unique id, execute commands based on user inputs, set and get inputs from local storage. 
+
 ## Installation
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+What are the steps required to install your project? You can access the github code by going to https://github.com/lnguyen87/code-quiz. Once on the webpage, click the green "code" button and copy the https or ssh address. Once you have the link copied, open up a terminal such as git bash, navigate to the location you want to create a repository, then type "git clone + [paste copied link]" to download the code to your local computer. 
 ## Usage
-Provide instructions and examples for use. Include screenshots as needed.
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-    ```md
-    ![alt text](assets/images/screenshot.png)
+![code quiz preview](assets/images/screenshot.jpg)
+
+Instructions:
+- Player has 60 seconds to answer 5 questions.
+- Each question answered correctly rewards player with 10 points.
+- Each question answered incorrectly subtracts 5 seconds from the timer.
+- Once the timer reaches 0, the game is over.
+- If the player gets the high score a pop-up window will prompt the player to input their initials, which will save their initials and score to the high score page.
+
+![video-preview](assets/images/video-preview.gif)
     ```
 ## Credits
-List your collaborators, if any, with links to their GitHub profiles.
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-If you followed tutorials, include links to those here as well.
+Worked with TA Cory Calaway to resolve saving names to localStorage.
 ## License
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
----
-🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-## Badges
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-## Features
-If your project has a lot of features, list them here.
-## How to Contribute
-If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.
-## Tests
-Go the extra mile and write tests for your application. Then provide examples on how to run them here.
+Educational Community License v2.0

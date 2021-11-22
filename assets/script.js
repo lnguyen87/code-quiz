@@ -46,6 +46,30 @@ var possibleQuestion = [{
 }
 ];
 
+var highScoreDisplay = function () {
+    var name = localStorage.getItem("name");
+    var score = localStorage.getItem("highscore");
+    console.log(scoreName);
+    console.log(scoreScore);
+    // update text of id scoreName 
+    scoreName.textContent = "Initials: " + name + "    |    " + "     Score: " + score;
+    scoreName.style.backgroundColor = "#005780";
+    scoreName.style.color = "#FFFFFF";
+    scoreName.style.textAlign = "center";
+    scoreName.style.boxShadow = "1px 1px 2px #000000";
+};
+
+// High score page displays when High Scores button clicked
+function showHighScore () {
+    // display high score table
+    highScoreDisplay();
+    
+    // remove buttons and intro text
+    scoreButton.remove();
+    introText.remove();
+    scoreContent.classList.remove("hide");
+    
+};
 
 // Timer runs when start quiz button clicked
 function startQuiz() {
@@ -61,8 +85,7 @@ var counter = 60;
 setInterval(function() {
     counter--;
     if (counter >= 0) {
-        span = document.getElementById("timer");
-        span.innerText = "Time remaining: " + counter;
+        timer.textContent = "Time remaining: " + counter;
     }
 // alert user once timer reaches 0
     if (counter === 0) {
@@ -77,10 +100,10 @@ function showQuestion() {
     if(counter === 0 || currentIndex === possibleQuestion.length) {
         console.log("The quiz has ended.");
         questionContent.style.display = "none";
+        endQuiz();
         clearInterval(counter);
         timer.remove();
         scoreContent.classList.remove("hide");
-        endQuiz();
         return
     }
     var currentQuestion = possibleQuestion[currentIndex];
@@ -143,16 +166,6 @@ var endQuiz = function() {
         alert("You did not answer any questions correctly.");
     }
 
-    var highScoreDisplay = function () {
-        var name = localStorage.getItem("name");
-        console.log(scoreName);
-        console.log(scoreScore);
-        // update text of id scoreName 
-        scoreName.textContent = name;
-        scoreScore.textContent = highScore;
-        
-        
-    }
     highScoreDisplay();
     
 };
@@ -173,4 +186,6 @@ var playerName = function() {
 startButton.addEventListener("click", startQuiz);
 
 // Add event lisener to high score button
-// scoreButton.addEventListener("click", highScore);
+scoreButton.addEventListener("click", showHighScore);
+
+
